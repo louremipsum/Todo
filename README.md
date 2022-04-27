@@ -1,3 +1,23 @@
+# Todo App made for practising ReactJS and ChakraUI
+
+## Features Available
+* The classic todo app with basic functionality of adding, deleting and striking the tasks
+
+## Upcoming Feature
+Adding Notes
+Editing the style of texts
+Adding sub-tasks within tasks
+Voice Notes
+
+### long future updates
+mind-maps
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
