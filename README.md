@@ -4,13 +4,13 @@
 * The classic todo app with basic functionality of adding, deleting and striking the tasks
 
 ## Upcoming Feature
-Adding Notes
-Editing the style of texts
-Adding sub-tasks within tasks
-Voice Notes
+* Adding Notes
+* Editing the style of texts
+* Adding sub-tasks within tasks
+* Voice Notes
 
 ### long future updates
-mind-maps
+* mind-maps
 
 
 
