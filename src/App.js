@@ -1,39 +1,42 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { Button, ButtonGroup } from "@chakra-ui/react";
-import { Stack, HStack, VStack } from "@chakra-ui/react";
+import { Heading, Button, ButtonGroup } from "@chakra-ui/react";
+import TodoList from "./components/TodoList";
+import AddTodo from "./components/AddTodo";
+import { VStack, IconButton } from "@chakra-ui/react";
+import { FaSun, FaMoon } from "react-icons/fa";
+import data from "./data.json";
+import { useState } from "react";
 
 function App() {
+  const [dataTodo, setTodos] = useState(data);
+
+  const deleteTodo = (id) => {
+    const newTodos = dataTodo.filter((todo) => {
+      return todo.id !== id;
+    });
+    setTodos(newTodos);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <VStack p={4}>
+        <IconButton
+          icon={<FaSun />}
+          isRound={true}
+          size="lg"
+          alignSelf="flex-end"
+        ></IconButton>
+        <Heading
+          mb="8"
+          fontWeight="extrabold"
+          size="2xl"
+          bgGradient="linear(to-r, pink.500, red.200, blue.300)"
+          bgClip="text"
         >
-          Learn React
-        </a>
-        <Stack direction="row" spacing={4} align="center">
-          <Button colorScheme="teal" variant="solid">
-            Button
-          </Button>
-          <Button colorScheme="teal" variant="outline">
-            Button
-          </Button>
-          <Button colorScheme="teal" variant="ghost">
-            Button
-          </Button>
-          <Button colorScheme="teal" variant="link">
-            Button
-          </Button>
-        </Stack>
-      </header>
+          Todo Application
+        </Heading>
+        <TodoList dataTodo={data} deleteTodo={deleteTodo} />
+        <AddTodo />
+      </VStack>
     </div>
   );
 }
