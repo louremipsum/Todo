@@ -1,7 +1,6 @@
-import { Heading, Button, ButtonGroup } from "@chakra-ui/react";
+import { Heading, VStack, IconButton, useColorMode } from "@chakra-ui/react";
 import TodoList from "./components/TodoList";
 import AddTodo from "./components/AddTodo";
-import { VStack, IconButton, useColorMode } from "@chakra-ui/react";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
