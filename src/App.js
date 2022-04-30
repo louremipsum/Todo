@@ -3,7 +3,6 @@ import TodoList from "./components/TodoList";
 import AddTodo from "./components/AddTodo";
 import { VStack, IconButton, useColorMode } from "@chakra-ui/react";
 import { FaSun, FaMoon } from "react-icons/fa";
-import data from "./data.json";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -39,7 +38,6 @@ function App() {
           onClick={toggleColorMode}
         />
         <Heading
-          mb="8"
           fontWeight="extrabold"
           size="2xl"
           bgGradient="linear(to-r, pink.500, red.200, blue.300)"

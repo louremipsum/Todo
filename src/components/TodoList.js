@@ -24,7 +24,7 @@ function TodoList({ dataTodo, deletedTodo }) {
       divider={<StackDivider />}
       borderColor="gray.100"
       p="4"
-      mt="8"
+      marginTop={16}
       borderWidth="2px"
       borderRadius="16px"
       w="100%"
